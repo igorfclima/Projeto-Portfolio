@@ -70,10 +70,9 @@ src/
 │   ├── sections/         # Seções da página (Hero, Projects, Skills, Contact)
 │   └── shared/           # Componentes globais (Navbar, Footer, ThemeToggle)
 ├── constants/            # Dados estáticos (Links, textos de projetos, redes sociais)
-│   └── index.ts          # Centralização de textos para fácil manutenção
-├── hooks/                # Custom Hooks para lógica de UI (Scroll, animações)
+├── contexts/             # Contextos
 ├── lib/                  # Configurações de bibliotecas externas (utils.ts do shadcn)
 │   └── utils.ts          # Funções utilitárias (clsx + tailwind-merge)
-├── types/                # Definições de interfaces TypeScript
+├── i18n                  # Traduções
 └── assets/               # Imagens, vetores e ícones locais
 ```
