@@ -57,7 +57,7 @@ export function Technologies() {
                         <motion.div
                             key={tech.name}
                             variants={itemVariants}
-                            className="flex items-center gap-4 p-4 rounded-2xl bg-card-skills border border-border hover:border-border/80 transition-colors duration-300"
+                            className="flex items-center gap-4 p-4 rounded-2xl bg-card-skills border border-border transition-colors duration-300"
                         >
                             <div
                                 className="w-12 h-12 shrink-0 rounded-xl flex items-center justify-center"
