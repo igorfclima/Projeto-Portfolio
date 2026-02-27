@@ -1,5 +1,6 @@
 "use client";
 
+import { useLanguage } from "@/contexts/LanguageContext";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { ArrowRight, Download } from "lucide-react";
@@ -7,6 +8,7 @@ import styles from "./hero.module.css";
 import { BGPattern } from "../ui/bg-pattern";
 
 export function Hero() {
+    const { language, toggleLanguage, t } = useLanguage();
     return (
         <section
             id="home"
@@ -24,14 +26,12 @@ export function Hero() {
                     transition={{ duration: 0.5 }}
                 >
                     <p className="uppercase font-bold text-muted text-sm tracking-widest">
-                        Based In Brazil
+                        {t.hero.based}
                     </p>
                     <h1 className="text-5xl md:text-7xl font-bold tracking-wide text-white mb-4">
-                        Quality{" "}
-                        <span className="text-accent">
-                            Design & Web Development
-                        </span>{" "}
-                        Synergy
+                        {t.hero.titleLine1}{" "}
+                        <span className="text-accent">{t.hero.titleLine2}</span>{" "}
+                        {t.hero.titleLine3}
                     </h1>
                 </motion.div>
 
@@ -41,8 +41,7 @@ export function Hero() {
                     transition={{ duration: 0.5, delay: 0.1 }}
                 >
                     <p className="text-lg md:text-xl text-gray-400 leading-relaxed max-w-3xl mx-auto">
-                        Hi, I'm Igor, I create intuitive, visually stunning and
-                        highly functional web applications.
+                        {t.hero.subtitle}
                     </p>
                 </motion.div>
 
@@ -56,7 +55,7 @@ export function Hero() {
                         href="#projects"
                         className="flex items-center gap-2 px-8 py-3 text-white font-semibold rounded-md hover:border-accent border border-transparent hover:text-accent transition-all duration-300 w-full sm:w-auto justify-center group"
                     >
-                        See My Work
+                        {t.hero.btnProjects}
                         <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                     </Link>
                     <Link
@@ -64,10 +63,13 @@ export function Hero() {
                         className="flex items-center gap-2 px-8 py-3 bg-transparent text-white font-semibold rounded-md  transition-all duration-300 w-full sm:w-auto justify-center border border-transparent hover:border-accent hover:text-accent"
                     >
                         <Download className="w-6 h-6 text-accent" />
-                        <p>Download CV</p>
+                        <p>{t.hero.btnContact}</p>
                     </Link>
-                    <div className="flex items-center gap-2 px-8 py-3 bg-transparent text-white font-semibold rounded-md  transition-all duration-300 w-full sm:w-auto justify-center border border-transparent hover:border-accent hover:text-accent">
-                        <p>Portuguese</p>
+                    <div
+                        onClick={toggleLanguage}
+                        className="flex items-center gap-2 px-8 py-3 bg-transparent text-white font-semibold rounded-md  transition-all duration-300 w-full sm:w-auto justify-center border border-transparent hover:border-accent hover:text-accent cursor-pointer"
+                    >
+                        <p>{t.hero.btnLanguage}</p>
                     </div>
                 </motion.div>
             </div>

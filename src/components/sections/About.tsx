@@ -2,13 +2,15 @@
 
 import { FaReact, FaPython } from "react-icons/fa";
 import { motion } from "framer-motion";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export function About() {
+    const { t } = useLanguage();
     return (
         <section id="about" className="py-24 px-6 md:px-12 bg-background">
             <div className="max-w-6xl mx-auto mb-12">
                 <h2 className="text-3xl md:text-4xl font-bold text-accent tracking-wide mb-8">
-                    About Me
+                    {t.about.title}
                 </h2>
             </div>
             <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
@@ -20,15 +22,10 @@ export function About() {
                     className="space-y-6"
                 >
                     <p className="text-muted leading-relaxed text-lg">
-                        I'm a passionate web developer with a love for building
-                        elegant, user-friendly applications. With expertise in
-                        modern frontend and backend technologies, I bring ideas
-                        to life through clean code and thoughtful design.
+                        {t.about.paragraph1}
                     </p>
                     <p className="text-muted leading-relaxed text-lg">
-                        When I'm not coding, you'll find me exploring new
-                        technologies, contributing to open-source, or enjoying a
-                        good cup of coffee.
+                        {t.about.paragraph2}
                     </p>
                 </motion.div>
 
@@ -45,10 +42,10 @@ export function About() {
                         </div>
                         <div>
                             <h3 className="text-white font-semibold text-lg tracking-wide">
-                                Modern Technologies
+                                {t.about.card1Title}
                             </h3>
                             <p className="text-muted text-sm mt-1">
-                                React.Js, Tailwind, Next.Js
+                                {t.about.card1Desc}
                             </p>
                         </div>
                     </div>
@@ -59,10 +56,10 @@ export function About() {
                         </div>
                         <div>
                             <h3 className="text-text-main font-semibold text-lg tracking-wide">
-                                Back-end Solutions
+                                {t.about.card2Title}
                             </h3>
-                            <p className="text-white text-sm mt-1">
-                                Spring-boot, .Net, Django.
+                            <p className="text-muted text-sm mt-1">
+                                {t.about.card2Desc}
                             </p>
                         </div>
                     </div>

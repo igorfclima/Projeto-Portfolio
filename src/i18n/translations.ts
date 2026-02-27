@@ -38,6 +38,12 @@ export const translations = {
         },
         experience: {
             title: "My experience",
+            job1Role: "IT Business Partner",
+            job1Desc:
+                "Código código código código código código código código código código código código código",
+            job2Role: "Estagiário de Engenharia de Software",
+            job2Desc:
+                "Código código código código código código código código código código código código código",
         },
         projects: {
             title: "My projects",
@@ -74,7 +80,7 @@ export const translations = {
             titleLine3: "Conectados",
             subtitle:
                 "Olá, sou Igor, crio aplicações web intuitivas, visualmente impressionantes e altamente funcionais.",
-            btnProjects: "Veja Meu Trabalho",
+            btnProjects: "Ver Projetos",
             btnContact: "Baixar CV",
             btnLanguage: "English",
         },
@@ -96,6 +102,12 @@ export const translations = {
         },
         experience: {
             title: "Minha experiência",
+            job1Role: "IT Business Partner",
+            job1Desc:
+                "Código código código código código código código código código código código código código",
+            job2Role: "Estagiário de Engenharia de Software",
+            job2Desc:
+                "Código código código código código código código código código código código código código",
         },
         projects: {
             title: "Meus projetos",

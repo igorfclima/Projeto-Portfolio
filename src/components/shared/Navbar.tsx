@@ -1,9 +1,11 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { useLanguage } from "@/contexts/LanguageContext";
 import Link from "next/link";
 
 export function Navbar() {
+    const { t } = useLanguage();
     const [isScrolled, setIsScrolled] = useState(false);
 
     useEffect(() => {
@@ -40,31 +42,31 @@ export function Navbar() {
                         href="#home"
                         className="hover:text-accent transition-colors"
                     >
-                        Home
+                        {t.navbar.home}
                     </Link>
                     <Link
                         href="#about"
                         className="hover:text-accent transition-colors"
                     >
-                        About Me
+                        {t.navbar.about}
                     </Link>
                     <Link
                         href="#experience"
                         className="hover:text-accent transition-colors"
                     >
-                        Experience
+                        {t.navbar.experience}
                     </Link>
                     <Link
                         href="#projects"
                         className="hover:text-accent transition-colors"
                     >
-                        Projects
+                        {t.navbar.projects}
                     </Link>
                     <Link
                         href="#contact"
                         className="hover:text-accent transition-colors"
                     >
-                        Contact
+                        {t.navbar.contact}
                     </Link>
                 </nav>
             </div>

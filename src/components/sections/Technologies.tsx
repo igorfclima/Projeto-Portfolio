@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 
 import { techStack } from "@/constants/techCardItems";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const containerVariants = {
     hidden: { opacity: 0 },
@@ -18,6 +19,7 @@ const itemVariants = {
 };
 
 export function Technologies() {
+    const { t } = useLanguage();
     return (
         <section
             id="technologies"
@@ -31,7 +33,7 @@ export function Technologies() {
                         viewport={{ once: true }}
                         className="text-3xl md:text-4xl font-bold text-text-main tracking-wide mb-4"
                     >
-                        Current technologies
+                        {t.technologies.title}
                     </motion.h2>
                     <motion.p
                         initial={{ opacity: 0 }}
@@ -40,9 +42,7 @@ export function Technologies() {
                         transition={{ delay: 0.2 }}
                         className="text-muted text-base md:text-lg max-w-3xl"
                     >
-                        I'm proficient in a range of modern technologies that
-                        empower me to build highly functional solutions. These
-                        are some of my main technologies.
+                        {t.technologies.subtitle}
                     </motion.p>
                 </div>
 

@@ -4,8 +4,10 @@ import { motion } from "framer-motion";
 import { ArrowUpRight, ChevronRight } from "lucide-react";
 import Link from "next/link";
 import { projects } from "@/constants/projects";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export function Projects() {
+    const { t } = useLanguage();
     return (
         <section id="projects" className="py-20 px-6 md:px-12 bg-background">
             <div className="max-w-6xl mx-auto">
@@ -16,7 +18,7 @@ export function Projects() {
                         viewport={{ once: true }}
                         className="text-3xl md:text-4xl font-bold text-text-main tracking-wide"
                     >
-                        My portfolio
+                        {t.projects.title}
                     </motion.h2>
 
                     <motion.div
@@ -28,7 +30,7 @@ export function Projects() {
                             href="#all-projects"
                             className="flex items-center gap-2 px-4 py-2 rounded-lg border border-border text-sm text-muted hover:text-text-main hover:border-text-main/50 transition-colors"
                         >
-                            All Projects
+                            {t.projects.button}
                             <ChevronRight className="w-4 h-4" />
                         </Link>
                     </motion.div>

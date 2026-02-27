@@ -1,10 +1,11 @@
 "use client";
 
 import { motion } from "framer-motion";
-
+import { useLanguage } from "@/contexts/LanguageContext";
 import { experiences } from "@/constants/experiences";
 
 export function Experience() {
+    const { t } = useLanguage();
     return (
         <section id="experience" className="py-20 px-6 md:px-12 bg-background">
             <div className="max-w-6xl mx-auto">
@@ -14,7 +15,7 @@ export function Experience() {
                     viewport={{ once: true }}
                     className="text-3xl md:text-4xl font-bold text-text-main tracking-wide mb-16"
                 >
-                    My experience
+                    {t.experience.title}
                 </motion.h2>
 
                 <div className="relative">

@@ -1,10 +1,12 @@
 "use client";
 
+import { useLanguage } from "@/contexts/LanguageContext";
 import { motion } from "framer-motion";
 import { Mail, Phone, MapPin } from "lucide-react";
 import { BsGithub, BsLinkedin } from "react-icons/bs";
 
 export function Contact() {
+    const { t } = useLanguage();
     return (
         <section
             id="contact"
@@ -20,17 +22,17 @@ export function Contact() {
                         className="lg:pr-12 flex flex-col justify-center"
                     >
                         <h2 className="text-4xl md:text-5xl font-bold text-text-main mb-6">
-                            Like what you see?
+                            {t.contact.title}
                         </h2>
                         <p className="text-muted text-lg leading-relaxed mb-10 max-w-md">
-                            Reach out{" "}
+                            {t.contact.subtitle}{" "}
                             <a
                                 href="mailto:igrfclima@gmail.com"
                                 className="text-accent font-bold font"
                             >
-                                via email
+                                {t.contact.subtitle2}
                             </a>{" "}
-                            to collaborate!
+                            {t.contact.subtitle3}
                         </p>
 
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
@@ -40,7 +42,7 @@ export function Contact() {
                                 </div>
                                 <div className="flex flex-col">
                                     <span className="text-base font-semibold text-text-main">
-                                        Email
+                                        {t.contact.email}
                                     </span>
                                     <a
                                         href="mailto:igrfclima@gmail.com"
@@ -56,7 +58,7 @@ export function Contact() {
                                 </div>
                                 <div className="flex flex-col">
                                     <span className="text-base font-semibold text-text-main">
-                                        Phone
+                                        {t.contact.phone}
                                     </span>
                                     <a
                                         href="tel:+5531992863422"
@@ -73,7 +75,7 @@ export function Contact() {
                                 </div>
                                 <div className="flex flex-col">
                                     <span className="text-base font-semibold text-text-main">
-                                        Address
+                                        {t.contact.location}
                                     </span>
                                     <span className="text-sm text-muted">
                                         Belo Horizonte, Brazil
@@ -87,7 +89,7 @@ export function Contact() {
                                 </div>
                                 <div className="flex flex-col">
                                     <span className="text-base font-semibold text-text-main">
-                                        Github
+                                        {t.contact.github}
                                     </span>
                                     <a
                                         href="https://github.com/igorfclima"
@@ -104,7 +106,7 @@ export function Contact() {
                                 </div>
                                 <div className="flex flex-col">
                                     <span className="text-base font-semibold text-text-main">
-                                        LinkedIn
+                                        {t.contact.linkedin}
                                     </span>
                                     <a
                                         href="https://www.linkedin.com/in/igorfclima/"
@@ -133,7 +135,7 @@ export function Contact() {
                                     htmlFor="name"
                                     className="text-sm font-semibold text-text-main"
                                 >
-                                    Name
+                                    {t.contact.name}
                                 </label>
                                 <input
                                     type="text"
@@ -147,7 +149,7 @@ export function Contact() {
                                     htmlFor="email"
                                     className="text-sm font-semibold text-text-main"
                                 >
-                                    Email
+                                    {t.contact.emailInput}
                                 </label>
                                 <input
                                     type="email"
@@ -161,7 +163,7 @@ export function Contact() {
                                     htmlFor="phone"
                                     className="text-sm font-semibold text-text-main"
                                 >
-                                    Phone
+                                    {t.contact.phone}
                                 </label>
                                 <input
                                     type="tel"
@@ -175,7 +177,7 @@ export function Contact() {
                                     htmlFor="message"
                                     className="text-sm font-semibold text-text-main"
                                 >
-                                    Message
+                                    {t.contact.messageInput}
                                 </label>
                                 <textarea
                                     id="message"
@@ -188,7 +190,7 @@ export function Contact() {
                                 type="submit"
                                 className="w-full bg-white text-black font-bold text-base rounded-lg py-4 mt-2 hover:bg-gray-200 transition-colors active:scale-[0.98]"
                             >
-                                Submit
+                                {t.contact.sendButton}
                             </button>
                         </form>
                     </motion.div>
