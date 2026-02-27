@@ -1,0 +1,8 @@
+.pontasEsfumacadas {
+    -webkit-mask-image: radial-gradient(
+        ellipse at center,
+        black 40%,
+        transparent 80%
+    );
+    mask-image: radial-gradient(ellipse at center, black 40%, transparent 80%);
+}
